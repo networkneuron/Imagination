@@ -1,0 +1,101 @@
+{
+  "version": "1.0.0",
+  "created_at": "2024-01-01T00:00:00",
+  "updated_at": "2024-01-01T00:00:00",
+  
+  "logging": {
+    "level": "INFO",
+    "file": "automation_agent.log",
+    "max_size": "10MB",
+    "backup_count": 5
+  },
+  
+  "email": {
+    "enabled": false,
+    "from_email": "your_email@example.com",
+    "smtp": {
+      "server": "smtp.gmail.com",
+      "port": 587,
+      "username": "your_email@gmail.com",
+      "password": "your_app_password",
+      "use_tls": true
+    },
+    "imap": {
+      "server": "imap.gmail.com",
+      "port": 993,
+      "username": "your_email@gmail.com",
+      "password": "your_app_password",
+      "use_ssl": true
+    },
+    "recipients": ["team@company.com"],
+    "templates": {}
+  },
+  
+  "whatsapp": {
+    "enabled": false,
+    "templates": {}
+  },
+  
+  "telegram": {
+    "enabled": false,
+    "bot_token": "your_bot_token_from_botfather",
+    "templates": {}
+  },
+  
+  "social_media": {
+    "enabled": false,
+    "facebook": {
+      "email": "your_facebook_email",
+      "password": "your_facebook_password"
+    },
+    "instagram": {
+      "username": "your_instagram_username",
+      "password": "your_instagram_password"
+    },
+    "linkedin": {
+      "email": "your_linkedin_email",
+      "password": "your_linkedin_password"
+    }
+  },
+  
+  "ai": {
+    "openai": {
+      "enabled": false,
+      "api_key": "your_openai_api_key",
+      "model": "gpt-3.5-turbo"
+    },
+    "anthropic": {
+      "enabled": false,
+      "api_key": "your_anthropic_api_key",
+      "model": "claude-3-sonnet-20240229"
+    }
+  },
+  
+  "voice_commands": {
+    "enabled": true,
+    "continuous_listening": true,
+    "timeout": 5,
+    "phrase_time_limit": 5
+  },
+  
+  "safety": {
+    "confirm_dangerous_actions": true,
+    "max_file_size": "100MB",
+    "allowed_file_types": [".txt", ".pdf", ".doc", ".docx", ".jpg", ".png", ".gif"],
+    "blocked_commands": ["rm -rf /", "format", "del /s /q C:\\"]
+  },
+  
+  "automation": {
+    "enabled": true,
+    "check_interval": 300,
+    "max_concurrent_tasks": 5,
+    "task_timeout": 3600
+  },
+  
+  "notifications": {
+    "enabled": true,
+    "email_alerts": true,
+    "desktop_notifications": true,
+    "sound_alerts": false
+  }
+}
